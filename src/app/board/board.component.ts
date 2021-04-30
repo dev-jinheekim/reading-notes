@@ -22,5 +22,12 @@ export class BoardComponent implements OnInit, AfterViewInit {
     console.log('BoardComponent', this.notes);
   }
 
+  onDrop(event) {
+    console.log('onDrop', event);
+  }
+
+  onDrag() {
+    // console.log('onDrag', event);
+  }
 
 }

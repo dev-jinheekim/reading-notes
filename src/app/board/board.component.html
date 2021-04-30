@@ -4,6 +4,10 @@
   </div>
   <div class="card-body">
     <app-search-book *ngIf=" status === 'TODO'"></app-search-book>
-    <app-notes-list [notes]="notes"></app-notes-list>
+    <ul class="row no-gutters p-0" >
+      <li class="list-unstyled" draggable="true" *ngFor="let note of notes" style="border: 1px solid black;" (drop)="onDrop($event)" (drag)="onDrag()">
+        {{ note.bookIsbn }}
+      </li>
+    </ul>
   </div>
 </div>

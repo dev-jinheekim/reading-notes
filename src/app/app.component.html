@@ -8,15 +8,21 @@
 
   <div class="row">
     <app-board class="col"
+               cdkDragList
                [status]="'TODO'"
                [notes]=todo>
     </app-board>
     <app-board class="col"
-               [status]="'DOING'">
+               cdkDropList
+               [status]="'DOING'"
+               [notes]=todo>
     </app-board>
     <app-board class="col"
-               [status]="'DONE'">
+               cdkDropList
+               [status]="'DONE'"
+               [notes]=todo>
     </app-board>
   </div>
 
 </div>
+

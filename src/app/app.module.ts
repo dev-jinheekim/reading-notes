@@ -10,6 +10,8 @@ import { SearchBookComponent } from './search-book/search-book.component';
 import { NotesListComponent } from './notes-list/notes-list.component';
 import { BoardComponent } from './board/board.component';
 import { NoteDetailComponent } from './note-detail/note-detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 const routes: Routes = [
   { path: 'home', component: AppComponent},
@@ -31,6 +33,8 @@ const routes: Routes = [
     FormsModule,
     ReactiveFormsModule,
     [RouterModule.forRoot(routes)],
+    BrowserAnimationsModule,
+    DragDropModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
